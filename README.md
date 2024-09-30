@@ -34,10 +34,10 @@ https://你的IP/https://github.com/test/aa.ini
 
 ## 配置
 
-你可以在 `application.yml` 文件中配置服务器端口、基本 URL 及其他设置。根据你的环境更新以下属性：
+你可以在 `application.properties` 文件中配置服务器端口、基本 URL 及其他设置。根据你的环境更新以下属性：
 
 ```properties
-server.port=8080
+server.port=80
 # 可代理域名列表 逗号分隔
 allow_domains: raw.githubusercontent.com,github.com
 # 可代理文件后缀列表 逗号分隔
