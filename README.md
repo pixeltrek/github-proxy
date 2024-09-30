@@ -14,7 +14,7 @@
 该工具允许你通过自定义域名代理 GitHub 上托管的文件。当你按照以下格式提供 GitHub URL 时，工具会获取该文件并通过你的网站提供。
 
 例如：
-- 输入：`https://mywebsite/https://github.com/test/aa.ini`
+- 输入：`https://你的ip/https://github.com/test/aa.ini`
 - 输出：`https://github.com/test/aa.ini` 的内容。
 
 ## 前提条件
