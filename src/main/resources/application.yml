@@ -1,0 +1,12 @@
+# ????
+spring:
+  application:
+    name: github-proxy
+# ???
+server:
+  port: 10000
+
+
+domains: raw.githubusercontent.com,github.com
+file_suffixs: .ini,.yaml,.txt,.java,.py,.html,.css,.js,.ts,.md,.list
+
