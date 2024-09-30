@@ -8,5 +8,5 @@ server:
 
 
 domains: raw.githubusercontent.com,github.com
-file_suffixs: .ini,.yaml,.txt,.java,.py,.html,.css,.js,.ts,.md,.list
+file_suffixes: .ini,.yaml,.txt,.java,.py,.html,.css,.js,.ts,.md,.list
 
