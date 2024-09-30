@@ -1,78 +1,78 @@
 
-# GitHub Proxy Tool
+# GitHub 代理工具
 
-This is a simple Java-based proxy tool that allows you to access GitHub-hosted files through your own domain. By using this tool, you can bypass certain network restrictions and download GitHub files easily.
+这是一个基于 Java 的简单代理工具，允许你通过自定义域名访问托管在 GitHub 上的文件。使用此工具，你可以绕过某些网络限制，轻松下载 GitHub 文件。
 
-## Features
+## 功能
 
-- Proxy access to GitHub-hosted files.
-- Easily download files by providing a GitHub file URL through your website.
-- Supports URLs like `http://your_server/https://github.com/test/aa.ini` to download `https://github.com/test/aa.ini`.
+- 代理访问托管在 GitHub 上的文件。
+- 通过提供 GitHub 文件 URL，轻松通过你的网站下载文件。
+- 支持类似 `https://mywebsite/https://github.com/test/aa.ini` 的 URL 来下载 `https://github.com/test/aa.ini`。
 
-## How It Works
+## 工作原理
 
-The tool allows you to proxy a file hosted on GitHub by rewriting the URL through your custom domain. When you provide a GitHub URL in the format below, the tool fetches the file and serves it via your website.
+该工具允许你通过自定义域名代理 GitHub 上托管的文件。当你按照以下格式提供 GitHub URL 时，工具会获取该文件并通过你的网站提供。
 
-For example:
-- Input: `https://mywebsite/https://github.com/test/aa.ini`
-- Output: The content of the file `https://github.com/test/aa.ini` will be served by your website.
+例如：
+- 输入：`https://mywebsite/https://github.com/test/aa.ini`
+- 输出：你的网站将提供文件 `https://github.com/test/aa.ini` 的内容。
 
-## Prerequisites
+## 前提条件
 
-- Java Development Kit (JDK 8 or higher)
-- A server to host your Java application
+- Java 开发工具包（JDK 8 或更高版本）
+- 一台用于托管 Java 应用的服务器
 
-## Installation
+## 安装
 
-1. Clone the repository:
+1. 克隆仓库：
    ```bash
    git clone https://github.com/your-repo-name/your-project-name.git
    ```
 
-2. Navigate to the project directory:
+2. 进入项目目录：
    ```bash
    cd your-project-name
    ```
 
-3. Build the project:
+3. 构建项目：
    ```bash
    mvn clean install
    ```
 
-4. Run the application:
+4. 运行应用程序：
    ```bash
    java -jar target/your-project-name.jar
    ```
 
-## Usage
+## 使用方法
 
-Once the application is running, you can start using it by simply providing a URL in the following format:
+应用程序启动后，你可以通过提供以下格式的 URL 开始使用：
 
 ```
 https://mywebsite/https://github.com/{username}/{repository}/{file}
 ```
 
-### Example:
+### 示例：
 
-To download `aa.ini` from a GitHub repository, use the following URL:
+要从 GitHub 仓库下载 `aa.ini` 文件，可以使用以下 URL：
 
 ```
 https://mywebsite/https://github.com/test/aa.ini
 ```
 
-## Configuration
+## 配置
 
-You can configure the server port, base URL, and other settings in the `application.properties` file. Update the properties according to your environment:
+你可以在 `application.properties` 文件中配置服务器端口、基本 URL 及其他设置。根据你的环境更新以下属性：
 
 ```properties
 server.port=8080
 proxy.github.url=https://github.com/
 ```
 
-## Contributing
+## 贡献
 
-Contributions are welcome! Feel free to submit a pull request or open an issue to discuss improvements, bug fixes, or new features.
+欢迎贡献代码！如果你有改进建议、Bug 修复或新功能，可以随时提交 Pull Request 或打开 Issue 讨论。
 
-## License
+## 许可证
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+本项目使用 MIT 许可证。详细信息请参阅 [LICENSE](LICENSE) 文件。
