@@ -22,42 +22,14 @@
 - Java 开发工具包（JDK 8 或更高版本）
 - 一台用于托管 Java 应用的服务器
 
-## 安装
 
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/your-repo-name/your-project-name.git
-   ```
-
-2. 进入项目目录：
-   ```bash
-   cd your-project-name
-   ```
-
-3. 构建项目：
-   ```bash
-   mvn clean install
-   ```
-
-4. 运行应用程序：
-   ```bash
-   java -jar target/your-project-name.jar
-   ```
-
-## 使用方法
-
-应用程序启动后，你可以通过提供以下格式的 URL 开始使用：
-
-```
-https://mywebsite/https://github.com/{username}/{repository}/{file}
-```
 
 ### 示例：
 
 要从 GitHub 仓库下载 `aa.ini` 文件，可以使用以下 URL：
 
 ```
-https://mywebsite/https://github.com/test/aa.ini
+https://你的IP/https://github.com/test/aa.ini
 ```
 
 ## 配置
@@ -66,7 +38,10 @@ https://mywebsite/https://github.com/test/aa.ini
 
 ```properties
 server.port=8080
-proxy.github.url=https://github.com/
+# 可代理域名列表 逗号分隔
+allow_domains: raw.githubusercontent.com,github.com
+# 可代理文件后缀列表 逗号分隔
+file_suffixes: .ini,.yaml,.txt,.java,.py,.html,.css,.js,.ts,.md,.list
 ```
 
 ## 贡献
