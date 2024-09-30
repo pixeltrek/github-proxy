@@ -7,7 +7,7 @@
 
 - 代理访问托管在 GitHub 上的文件。
 - 通过提供 GitHub 文件 URL，轻松通过你的网站下载文件。
-- 支持类似 `https://mywebsite/https://github.com/test/aa.ini` 的 URL 来下载 `https://github.com/test/aa.ini`。
+- 支持类似 `https://你的ip/https://github.com/test/example.ini` 的 URL 来下载 `https://github.com/test/example.ini`。
 
 ## 工作原理
 
@@ -15,7 +15,7 @@
 
 例如：
 - 输入：`https://mywebsite/https://github.com/test/aa.ini`
-- 输出：你的网站将提供文件 `https://github.com/test/aa.ini` 的内容。
+- 输出：`https://github.com/test/aa.ini` 的内容。
 
 ## 前提条件
 
