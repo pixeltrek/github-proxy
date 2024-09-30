@@ -1,23 +1,23 @@
 package com.geekey.githubproxy.controller;
 
 import com.geekey.githubproxy.service.GetContentService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import lombok.extern.slf4j.Slf4j;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
 @RestController
-@Slf4j
 public class GetContentController {
 
-    @Value("${domains}")
+    @Value("${allow_domains}")
     private String[] domains;
     @Value("${file_suffixes}")
     private String[] suffixes;
@@ -26,7 +26,7 @@ public class GetContentController {
 
     @GetMapping("/**")
     @ResponseBody
-    public void getUrlContent(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public void getUrlContent(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // 设置响应的字符编码和Content-Type 指定UTF-8编码 设置内容类型为文本文件
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/plain");
